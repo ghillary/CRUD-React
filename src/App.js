@@ -13,7 +13,7 @@ const db_Curso = () => {
 const ItensTabela = ({ cursos, deleteCurso, editCurso }) => {
   return cursos.map((curso) => (
     <tr key={curso.nome}>
-      <td id='borda3'>{curso.nome}</td>
+      <td>{curso.nome}</td>
       <td>{curso.turno}</td>
       <td>{curso.modalidade}</td>
       <td>{curso.periodos}</td>
@@ -22,7 +22,7 @@ const ItensTabela = ({ cursos, deleteCurso, editCurso }) => {
           Editar
         </button>
       </td>
-      <td id='borda4' className='delete-btn' onClick={() => deleteCurso(curso.nome)}>
+      <td className='delete-btn' onClick={() => deleteCurso(curso.nome)}>
         <button className='botaoDeletar'>Deletar</button>
       </td>
     </tr>
@@ -148,12 +148,12 @@ function App() {
               <table className='tabela'>
                 <thead>
                   <tr>
-                    <th id='borda1'>Nome do Curso</th>
+                    <th>Nome do Curso</th>
                     <th>Turno</th>
                     <th>Modalidade</th>
                     <th>Períodos</th>
                     <th></th>
-                    <th id='borda2'></th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody>

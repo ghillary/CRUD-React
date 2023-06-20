@@ -90,26 +90,4 @@ td{
   border-right: 6px;
 }
 
-#borda1{
-  border-radius: 8px 0px 0px 0px;
-}
 
-#borda2{
-  border-radius: 0px 8px 0px 0px;
-}
-
-/*#borda3{
-  border-radius: 0px 0px 0px 8px;
-}*/
-
-#borda4{
-  border-radius: 0px 0px 8px 0px;
-}
-
-#borda3{
-  border-radius: 0;
-  }
-  
-  #borda3:last-child {
-    border-radius: 0px 0px 0px 8px;
-  }
