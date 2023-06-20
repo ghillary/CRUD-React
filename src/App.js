@@ -13,7 +13,7 @@ const db_Curso = () => {
 const ItensTabela = ({ cursos, deleteCurso, editCurso }) => {
   return cursos.map((curso) => (
     <tr key={curso.nome}>
-      <td>{curso.nome}</td>
+      <td id='borda3'>{curso.nome}</td>
       <td>{curso.turno}</td>
       <td>{curso.modalidade}</td>
       <td>{curso.periodos}</td>
@@ -22,7 +22,7 @@ const ItensTabela = ({ cursos, deleteCurso, editCurso }) => {
           Editar
         </button>
       </td>
-      <td className='delete-btn' onClick={() => deleteCurso(curso.nome)}>
+      <td id='borda4' className='delete-btn' onClick={() => deleteCurso(curso.nome)}>
         <button className='botaoDeletar'>Deletar</button>
       </td>
     </tr>
@@ -100,7 +100,7 @@ function App() {
       <div className='main'>
         <div className='form'>
           <form autoComplete='off' className='input-group' onSubmit={handleAdd}>
-            <label>Nome: </label>
+            <label className='label-group'>Nome: </label>
             <input
               type='text'
               className='input-group'
@@ -109,7 +109,7 @@ function App() {
               value={nome}
             ></input>
 
-            <label>Turno: </label>
+            <label className='label-group'>Turno: </label>
             <input
               type='text'
               className='input-group'
@@ -118,7 +118,7 @@ function App() {
               value={turno}
             ></input>
 
-            <label>Modalidade: </label>
+            <label className='label-group'>Modalidade: </label>
             <input
               type='text'
               className='input-group'
@@ -127,7 +127,7 @@ function App() {
               value={modalidade}
             ></input>
 
-            <label>Períodos: </label>
+            <label className='label-group'>Períodos: </label>
             <input
               type='text'
               className='input-group'
@@ -148,12 +148,12 @@ function App() {
               <table className='tabela'>
                 <thead>
                   <tr>
-                    <th>Nome do Curso</th>
+                    <th id='borda1'>Nome do Curso</th>
                     <th>Turno</th>
                     <th>Modalidade</th>
                     <th>Períodos</th>
                     <th></th>
-                    <th></th>
+                    <th id='borda2'></th>
                   </tr>
                 </thead>
                 <tbody>
